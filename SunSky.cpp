@@ -311,26 +311,26 @@ namespace
 {
     const float kCIEStandardSkyCoeffs[15][5] =
     {
-        4.0, -0.70,  0, -1.0, 0,        // Overcast. When normalised this is a fit of the older (1 + 2cos(theta)) / 3 formula found in CIEOvercastSkyLuminance.
-        4.0, -0.70,  2, -1.5, 0.15,     // Overcast, with steep luminance gradation and slight brightening towards the sun
+        {4.0, -0.70,  0, -1.0, 0},        // Overcast. When normalised this is a fit of the older (1 + 2cos(theta)) / 3 formula found in CIEOvercastSkyLuminance.
+        {4.0, -0.70,  2, -1.5, 0.15},     // Overcast, with steep luminance gradation and slight brightening towards the sun
 
-        1.1, -0.80,  0, -1.0, 0,        // Overcast, moderately graded with azimuthal uniformity
-        1.1, -0.80,  2, -1.5, 0.15,     // Overcast, moderately graded and slight brightening towards the sun
+        {1.1, -0.80,  0, -1.0, 0},        // Overcast, moderately graded with azimuthal uniformity
+        {1.1, -0.80,  2, -1.5, 0.15},     // Overcast, moderately graded and slight brightening towards the sun
 
-        0.0, -1.00,  0, -1.0, 0,        // Sky of uniform luminance
-        0.0, -1.00,  2, -1.5, 0.15,     // Partly cloudy sky, no gradation towards zenith, slight brightening towards the sun
-        0.0, -1.00,  5, -2.5, 0.30,     // Partly cloudy sky, no gradation towards zenith, brighter circumsolar region
-        0.0, -1.00, 10, -3.0, 0.45,     // Partly cloudy sky, no gradation towards zenith, distinct solar corona
+        {0.0, -1.00,  0, -1.0, 0},        // Sky of uniform luminance
+        {0.0, -1.00,  2, -1.5, 0.15},     // Partly cloudy sky, no gradation towards zenith, slight brightening towards the sun
+        {0.0, -1.00,  5, -2.5, 0.30},     // Partly cloudy sky, no gradation towards zenith, brighter circumsolar region
+        {0.0, -1.00, 10, -3.0, 0.45},     // Partly cloudy sky, no gradation towards zenith, distinct solar corona
 
-       -1.0, -0.55,  2, -1.5, 0.15,     // Partly cloudy, with the obscured sun
-       -1.0, -0.55,  5, -2.5, 0.30,     // Partly cloudy, with brighter circumsolar region
-       -1.0, -0.55, 10, -3.0, 0.45,     // White-blue sky with distinct solar corona
+       {-1.0, -0.55,  2, -1.5, 0.15},     // Partly cloudy, with the obscured sun
+       {-1.0, -0.55,  5, -2.5, 0.30},     // Partly cloudy, with brighter circumsolar region
+       {-1.0, -0.55, 10, -3.0, 0.45},     // White-blue sky with distinct solar corona
 
-       -1.0, -0.32, 10, -3.0, 0.45,     // CIE Standard Clear Sky, low illuminance turbidity. T <= 2.45
-       -1.0, -0.32, 16, -3.0, 0.30,     // CIE Standard Clear Sky, polluted atmosphere
+       {-1.0, -0.32, 10, -3.0, 0.45},     // CIE Standard Clear Sky, low illuminance turbidity. T <= 2.45
+       {-1.0, -0.32, 16, -3.0, 0.30},     // CIE Standard Clear Sky, polluted atmosphere
 
-       -1.0, -0.15, 16, -3.0, 0.30,     // Cloudless turbid sky with broad solar corona
-       -1.0, -0.15, 24, -2.8, 0.15,     // White-blue turbid sky with broad solar corona
+       {-1.0, -0.15, 16, -3.0, 0.30},     // Cloudless turbid sky with broad solar corona
+       {-1.0, -0.15, 24, -2.8, 0.15},     // White-blue turbid sky with broad solar corona
     };
 
     inline float CIELumRatio(const Vec3f& v, const Vec3f& toSun, float a, float b, float c, float d, float e)
