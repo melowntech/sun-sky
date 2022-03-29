@@ -561,7 +561,7 @@ inline Vec2f& Vec2f::MakeUnit(int i, float k)
     else if (i == 1)
     { x = vl_zero; y = k; }
     else 
-        CL_ERROR("(Vec2::Unit) illegal unit vector");
+    { CL_ERROR("(Vec2::Unit) illegal unit vector") };
 
     return *this;
 }
